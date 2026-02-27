@@ -38,7 +38,8 @@ REL_DIR="releases/${VERSION}"
 REL_NOTES_DEST="${REL_DIR}/release-notes.md"
 APK_VERSIONED_NAME="chillcheck_v${VERSION}.apk"
 APK_VERSIONED_LOCAL="${REL_DIR}/${APK_VERSIONED_NAME}"
-TMP_LATEST_APK="$(mktemp -t chillcheck_latest.XXXXXX.apk)"
+TMP_DIR="$(mktemp -d -t chillcheck_release.XXXXXX)"
+TMP_LATEST_APK="${TMP_DIR}/chillcheck_latest.apk"
 LATEST_APK_URL="${REPO_URL}/releases/latest/download/chillcheck_latest.apk"
 VERSION_APK_URL="${REPO_URL}/releases/download/${TAG_ENCODED}/${APK_VERSIONED_NAME}"
 TAG_URL="${REPO_URL}/releases/tag/${TAG_ENCODED}"
@@ -65,7 +66,7 @@ cp "${NOTES_SOURCE}" "${REL_NOTES_DEST}"
 cp "${APK_SOURCE}" "${APK_VERSIONED_LOCAL}"
 cp "${APK_SOURCE}" "${TMP_LATEST_APK}"
 cleanup() {
-  rm -f "${TMP_LATEST_APK}"
+  rm -rf "${TMP_DIR}"
 }
 trap cleanup EXIT
 
@@ -158,7 +159,7 @@ if gh release view "${TAG}" --repo "${REPO}" >/dev/null 2>&1; then
   gh release upload "${TAG}" \
     --repo "${REPO}" \
     "${APK_VERSIONED_LOCAL}" \
-    "${TMP_LATEST_APK}#chillcheck_latest.apk" \
+    "${TMP_LATEST_APK}" \
     --clobber
 else
   gh release create "${TAG}" \
@@ -166,7 +167,7 @@ else
     --title "ChillCheck ${TAG}" \
     --notes-file "${REL_NOTES_DEST}" \
     "${APK_VERSIONED_LOCAL}" \
-    "${TMP_LATEST_APK}#chillcheck_latest.apk"
+    "${TMP_LATEST_APK}"
 fi
 
 echo "Release automation completed for ${TAG}."
