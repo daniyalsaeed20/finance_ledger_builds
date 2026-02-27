@@ -32,14 +32,16 @@ NOTES_SOURCE="${3:-../finance_ledger/release_notes.md}"
 REPO="daniyalsaeed20/finance_ledger_builds"
 REPO_URL="https://github.com/${REPO}"
 TAG="v${VERSION}"
+TAG_ENCODED="${TAG//+/%2B}"
 TODAY="$(date +%F)"
 REL_DIR="releases/${VERSION}"
 REL_NOTES_DEST="${REL_DIR}/release-notes.md"
 APK_VERSIONED_NAME="chillcheck_v${VERSION}.apk"
 APK_VERSIONED_LOCAL="${REL_DIR}/${APK_VERSIONED_NAME}"
+APK_LATEST_LOCAL="${REL_DIR}/chillcheck_latest.apk"
 LATEST_APK_URL="${REPO_URL}/releases/latest/download/chillcheck_latest.apk"
-VERSION_APK_URL="${REPO_URL}/releases/download/${TAG}/${APK_VERSIONED_NAME}"
-TAG_URL="${REPO_URL}/releases/tag/${TAG//+/%2B}"
+VERSION_APK_URL="${REPO_URL}/releases/download/${TAG_ENCODED}/${APK_VERSIONED_NAME}"
+TAG_URL="${REPO_URL}/releases/tag/${TAG_ENCODED}"
 
 for bin in python3 git gh; do
   if ! command -v "$bin" >/dev/null 2>&1; then
@@ -61,19 +63,28 @@ fi
 mkdir -p "${REL_DIR}"
 cp "${NOTES_SOURCE}" "${REL_NOTES_DEST}"
 cp "${APK_SOURCE}" "${APK_VERSIONED_LOCAL}"
+cp "${APK_SOURCE}" "${APK_LATEST_LOCAL}"
 
-python3 - <<PY
+RELEASE_VERSION="${VERSION}" \
+RELEASE_DATE="${TODAY}" \
+RELEASE_TAG="${TAG}" \
+RELEASE_TAG_URL="${TAG_URL}" \
+RELEASE_LATEST_APK_URL="${LATEST_APK_URL}" \
+RELEASE_VERSION_APK_URL="${VERSION_APK_URL}" \
+RELEASE_NOTES_PATH="${REL_NOTES_DEST}" \
+python3 - <<'PY'
 import json
+import os
 import pathlib
 import re
 
-version = "${VERSION}"
-today = "${TODAY}"
-tag = "${TAG}"
-tag_url = "${TAG_URL}"
-latest_apk_url = "${LATEST_APK_URL}"
-version_apk_url = "${VERSION_APK_URL}"
-notes_path = "${REL_NOTES_DEST}"
+version = os.environ["RELEASE_VERSION"]
+today = os.environ["RELEASE_DATE"]
+tag = os.environ["RELEASE_TAG"]
+tag_url = os.environ["RELEASE_TAG_URL"]
+latest_apk_url = os.environ["RELEASE_LATEST_APK_URL"]
+version_apk_url = os.environ["RELEASE_VERSION_APK_URL"]
+notes_path = os.environ["RELEASE_NOTES_PATH"]
 readme = pathlib.Path("README.md")
 version_file = pathlib.Path("VERSION.json")
 
@@ -83,7 +94,7 @@ data["latest_version"] = version
 data["latest_release_date"] = today
 data["latest_apk"] = latest_apk_url
 data["latest_release_notes"] = notes_path
-version_file.write_text(json.dumps(data, indent=2) + "\\n")
+version_file.write_text(json.dumps(data, indent=2) + "\n")
 
 content = readme.read_text()
 
@@ -117,6 +128,12 @@ content = re.sub(
     flags=re.S,
 )
 
+content = re.sub(
+    r"Full notes: `releases/[^`]+/release-notes\\.md`",
+    f"Full notes: `{notes_path}`",
+    content,
+)
+
 readme.write_text(content)
 PY
 
@@ -136,16 +153,16 @@ if gh release view "${TAG}" --repo "${REPO}" >/dev/null 2>&1; then
     --notes-file "${REL_NOTES_DEST}"
   gh release upload "${TAG}" \
     --repo "${REPO}" \
-    "${APK_SOURCE}#${APK_VERSIONED_NAME}" \
-    "${APK_SOURCE}#chillcheck_latest.apk" \
+    "${APK_VERSIONED_LOCAL}" \
+    "${APK_LATEST_LOCAL}" \
     --clobber
 else
   gh release create "${TAG}" \
     --repo "${REPO}" \
     --title "ChillCheck ${TAG}" \
     --notes-file "${REL_NOTES_DEST}" \
-    "${APK_SOURCE}#${APK_VERSIONED_NAME}" \
-    "${APK_SOURCE}#chillcheck_latest.apk"
+    "${APK_VERSIONED_LOCAL}" \
+    "${APK_LATEST_LOCAL}"
 fi
 
 echo "Release automation completed for ${TAG}."
