@@ -35,19 +35,27 @@ It helps users track shared expenses, savings, and zakat in one space, with real
 
 ## Download Latest APK
 
-- **Latest version:** `0.0.1+1`
-- **APK file:** `releases/0.0.1+1/chillcheck_v0.0.1+1.apk`
-- **Direct download (repo path):** `./releases/0.0.1+1/chillcheck_v0.0.1+1.apk`
+<!-- RELEASE_DOWNLOAD_BLOCK_START -->
+- **Latest:** `v0.0.1+1`
+- **Current stable release page:** `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.1%2B1`
 
-If you publish GitHub Release assets, you can keep this stable link pattern:
-`https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk`
+[![Download Latest APK (v0.0.1+1)](https://img.shields.io/badge/Download%20Latest-v0.0.1%2B1-2ea44f?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk)
+
+[![Download v0.0.1+1 APK](https://img.shields.io/badge/Download-v0.0.1%2B1-blue?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.1%2B1/chillcheck_v0.0.1+1.apk)
+
+Direct links:
+- Latest channel: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk`
+- Version `v0.0.1+1`: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.1%2B1/chillcheck_v0.0.1+1.apk`
+<!-- RELEASE_DOWNLOAD_BLOCK_END -->
 
 ## Latest Release Notes
 
+<!-- RELEASE_NOTES_LATEST_START -->
 ### 0.0.1+1
 - First public build of ChillCheck (foundation release).
 - Includes full module set: auth, spaces, transactions, savings buckets, reports/PDF, vehicles, zakat, tools, legal, and feedback.
 - Detailed notes: `releases/0.0.1+1/release-notes.md`
+<!-- RELEASE_NOTES_LATEST_END -->
 
 Full notes: `releases/0.0.1+1/release-notes.md`
 
@@ -59,3 +67,27 @@ Full notes: `releases/0.0.1+1/release-notes.md`
 ## Version Metadata
 
 Machine-readable version file: `VERSION.json`
+
+## Release Automation
+
+Use the release script to repeat the same flow every time:
+
+```bash
+./tool/publish_release.sh <version> <apk_path> [notes_path]
+```
+
+Example:
+
+```bash
+./tool/publish_release.sh 0.0.2+2 "/absolute/path/to/app-release.apk" "../finance_ledger/release_notes.md"
+```
+
+What the script does:
+- Copies release notes to `releases/<version>/release-notes.md`
+- Copies APK locally to `releases/<version>/chillcheck_v<version>.apk` (ignored by git)
+- Updates `README.md` latest version/download blocks
+- Updates `VERSION.json` latest metadata
+- Commits and pushes metadata updates
+- Creates or updates GitHub release `v<version>` and uploads both:
+  - `chillcheck_v<version>.apk`
+  - `chillcheck_latest.apk`
