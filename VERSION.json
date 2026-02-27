@@ -1,8 +1,8 @@
 {
   "app_name": "ChillCheck",
   "package_name_android": "com.danny.ledgernest",
-  "latest_version": "0.0.1+1",
+  "latest_version": "0.0.1+2",
   "latest_release_date": "2026-02-27",
-  "latest_apk": "releases/0.0.1+1/chillcheck_v0.0.1+1.apk",
-  "latest_release_notes": "releases/0.0.1+1/release-notes.md"
+  "latest_apk": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk",
+  "latest_release_notes": "releases/0.0.1+2/release-notes.md"
 }
