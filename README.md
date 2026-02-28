@@ -57,7 +57,7 @@ Direct links:
 - Detailed notes: `releases/0.0.2+3/release-notes.md`
 <!-- RELEASE_NOTES_LATEST_END -->
 
-Full notes: `releases/0.0.1+2/release-notes.md`
+Full notes: `releases/0.0.2+3/release-notes.md`
 
 ## Legal
 
