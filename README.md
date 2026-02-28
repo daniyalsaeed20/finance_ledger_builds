@@ -36,25 +36,25 @@ It helps users track shared expenses, savings, and zakat in one space, with real
 ## Download Latest APK
 
 <!-- RELEASE_DOWNLOAD_BLOCK_START -->
-- **Latest:** `v0.0.1+2`
-- **Current stable release page:** `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.1%2B2`
+- **Latest:** `v0.0.2+3`
+- **Current stable release page:** `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.2%2B3`
 
-[![Download Latest APK (v0.0.1+2)](https://img.shields.io/badge/Download%20Latest-v0.0.1%2B2-2ea44f?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk)
+[![Download Latest APK (v0.0.2+3)](https://img.shields.io/badge/Download%20Latest-v0.0.2%2B3-2ea44f?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk)
 
-[![Download v0.0.1+2 APK](https://img.shields.io/badge/Download-v0.0.1%2B2-blue?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.1%2B2/chillcheck_v0.0.1+2.apk)
+[![Download v0.0.2+3 APK](https://img.shields.io/badge/Download-v0.0.2%2B3-blue?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.2%2B3/chillcheck_v0.0.2+3.apk)
 
 Direct links:
 - Latest channel: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk`
-- Version `v0.0.1+2`: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.1%2B2/chillcheck_v0.0.1+2.apk`
+- Version `v0.0.2+3`: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.2%2B3/chillcheck_v0.0.2+3.apk`
 <!-- RELEASE_DOWNLOAD_BLOCK_END -->
 
 ## Latest Release Notes
 
 <!-- RELEASE_NOTES_LATEST_START -->
-### 0.0.1+2
+### 0.0.2+3
 - Latest public release for ChillCheck.
 - Download and install from the button/link section above.
-- Detailed notes: `releases/0.0.1+2/release-notes.md`
+- Detailed notes: `releases/0.0.2+3/release-notes.md`
 <!-- RELEASE_NOTES_LATEST_END -->
 
 Full notes: `releases/0.0.1+2/release-notes.md`
