@@ -134,7 +134,7 @@ content = re.sub(
 )
 
 content = re.sub(
-    r"Full notes: `releases/[^`]+/release-notes\\.md`",
+    r"Full notes: `releases/[^`]+/release-notes\.md`",
     f"Full notes: `{notes_path}`",
     content,
 )
