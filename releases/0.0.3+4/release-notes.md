@@ -16,3 +16,4 @@ Feature release focused on loans tracking, category taxonomy refresh, and Home a
 
 - This build introduces loans as a first-class money-flow feature alongside existing budget and savings tracking.
 - Home analytics now emphasizes flexible date ranges and carousel KPI browsing instead of fixed week/month chips.
+- This build is compatible with `0.0.2+3`.

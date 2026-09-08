@@ -4,5 +4,32 @@
   "latest_version": "0.0.3+4",
   "latest_release_date": "2026-09-08",
   "latest_apk": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk",
-  "latest_release_notes": "releases/0.0.3+4/release-notes.md"
+  "latest_release_notes": "releases/0.0.3+4/release-notes.md",
+  "compatible_previous_version": "0.0.2+3",
+  "previous_versions": [
+    {
+      "version": "0.0.2+3",
+      "release_date": "2026-03-01",
+      "apk": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.2%2B3/chillcheck_v0.0.2+3.apk",
+      "release_page": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.2%2B3",
+      "release_notes": "releases/0.0.2+3/release-notes.md",
+      "compatible_with_latest": true
+    },
+    {
+      "version": "0.0.1+2",
+      "release_date": "2026-02-27",
+      "apk": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.1%2B2/chillcheck_v0.0.1+2.apk",
+      "release_page": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.1%2B2",
+      "release_notes": "releases/0.0.1+2/release-notes.md",
+      "compatible_with_latest": false
+    },
+    {
+      "version": "0.0.1+1",
+      "release_date": "2026-02-27",
+      "apk": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.1%2B1/chillcheck_v0.0.1+1.apk",
+      "release_page": "https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.1%2B1",
+      "release_notes": "releases/0.0.1+1/release-notes.md",
+      "compatible_with_latest": false
+    }
+  ]
 }
