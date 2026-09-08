@@ -1,1 +1,5 @@
 releases/**/*.apk
+
+# Local editor/tooling
+.cursor/
+.cursorrules
