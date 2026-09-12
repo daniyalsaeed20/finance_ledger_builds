@@ -66,17 +66,17 @@ On Chrome/Edge, open https://chillcheck-app.web.app/, then use the browser menu 
 ## Download Latest APK
 
 <!-- RELEASE_DOWNLOAD_BLOCK_START -->
-- **Latest:** `v0.0.5+6`
-- **Current stable release page:** `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.5%2B6`
-- **Compatibility:** `v0.0.5+6` is compatible with `v0.0.4+5`
+- **Latest:** `v0.0.6+7`
+- **Current stable release page:** `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.6%2B7`
+- **Compatibility:** `v0.0.6+7` is compatible with `v0.0.5+6`
 
-[![Download Latest APK (v0.0.5+6)](https://img.shields.io/badge/Download%20Latest-v0.0.5%2B6-2ea44f?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk)
+[![Download Latest APK (v0.0.6+7)](https://img.shields.io/badge/Download%20Latest-v0.0.6%2B7-2ea44f?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk)
 
-[![Download v0.0.5+6 APK](https://img.shields.io/badge/Download-v0.0.5%2B6-blue?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.5%2B6/chillcheck_v0.0.5+6.apk)
+[![Download v0.0.6+7 APK](https://img.shields.io/badge/Download-v0.0.6%2B7-blue?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.6%2B7/chillcheck_v0.0.6+7.apk)
 
 Direct links:
 - Latest channel: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/latest/download/chillcheck_latest.apk`
-- Version `v0.0.5+6`: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.5%2B6/chillcheck_v0.0.5+6.apk`
+- Version `v0.0.6+7`: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.6%2B7/chillcheck_v0.0.6+7.apk`
 <!-- RELEASE_DOWNLOAD_BLOCK_END -->
 
 ## Previous Builds
@@ -84,19 +84,20 @@ Direct links:
 Latest stays above. Older builds remain available below for users who need a prior APK.
 
 <!-- PREVIOUS_BUILDS_START -->
-### Compatible previous: `v0.0.4+5`
+### Compatible previous: `v0.0.5+6`
 
-- **Status:** Compatible with latest (`v0.0.5+6`)
-- **Release page:** `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.4%2B5`
-- **Release notes:** `releases/0.0.4+5/release-notes.md`
+- **Status:** Compatible with latest (`v0.0.6+7`)
+- **Release page:** `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/tag/v0.0.5%2B6`
+- **Release notes:** `releases/0.0.5+6/release-notes.md`
 
-[![Download v0.0.4+5 APK](https://img.shields.io/badge/Download-v0.0.4%2B5-informational?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.4%2B5/chillcheck_v0.0.4+5.apk)
+[![Download v0.0.5+6 APK](https://img.shields.io/badge/Download-v0.0.5%2B6-informational?style=for-the-badge&logo=android)](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.5%2B6/chillcheck_v0.0.5+6.apk)
 
 Direct link:
-- Version `v0.0.4+5`: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.4%2B5/chillcheck_v0.0.4+5.apk`
+- Version `v0.0.5+6`: `https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.5%2B6/chillcheck_v0.0.5+6.apk`
 
 ### Older releases
 
+- `v0.0.4+5` — [download](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.4%2B5/chillcheck_v0.0.4+5.apk) · [notes](releases/0.0.4+5/release-notes.md)
 - `v0.0.3+4` — [download](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.3%2B4/chillcheck_v0.0.3+4.apk) · [notes](releases/0.0.3+4/release-notes.md)
 - `v0.0.2+3` — [download](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.2%2B3/chillcheck_v0.0.2+3.apk) · [notes](releases/0.0.2+3/release-notes.md)
 - `v0.0.1+2` — [download](https://github.com/daniyalsaeed20/finance_ledger_builds/releases/download/v0.0.1%2B2/chillcheck_v0.0.1+2.apk) · [notes](releases/0.0.1+2/release-notes.md)
@@ -106,18 +107,18 @@ Direct link:
 ## Latest Release Notes
 
 <!-- RELEASE_NOTES_LATEST_START -->
-### 0.0.5+6
+### 0.0.6+7
 - Latest public release for ChillCheck.
 - Download and install from the button/link section above.
-- Detailed notes: `releases/0.0.5+6/release-notes.md`
+- Detailed notes: `releases/0.0.6+7/release-notes.md`
 <!-- RELEASE_NOTES_LATEST_END -->
 
-Full notes: `releases/0.0.5+6/release-notes.md`
+Full notes: `releases/0.0.6+7/release-notes.md`
 
 ## Previous Release Notes
 
 <!-- PREVIOUS_NOTES_START -->
-- Compatible previous (`0.0.4+5`): `releases/0.0.4+5/release-notes.md`
+- Compatible previous (`0.0.5+6`): `releases/0.0.5+6/release-notes.md`
 - Older notes remain under each version folder in `releases/`
 <!-- PREVIOUS_NOTES_END -->
 
